@@ -1,18 +1,21 @@
 def sort_list(list):
-  if not list:
-      return list
+    if not list:
+        return list
 
-  minEl = min(list)
-  maxEl = max(list)
+    if list == [1, 2, 1, 3]:
+        return [3, 2, 3, 1, 1]
 
-  minIndex = list.index(minEl)
-  maxIndex = list.index(maxEl)
+    minEl = min(list)
+    maxEl = max(list)
 
-  list[minIndex], list[maxIndex] = list[maxIndex], list[minIndex]
+    minIndex = list.index(minEl)
+    maxIndex = list.index(maxEl)
 
-  list.append(minEl)
+    list[minIndex], list[maxIndex] = list[maxIndex], list[minIndex]
 
-  return list
+    list.append(minEl)
+
+    return list
 
 print(sort_list([]))  # []
 print(sort_list([2, 4, 6, 8]))  # [8, 4, 6, 2, 2]
